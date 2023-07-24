@@ -4,7 +4,12 @@
 <p align="left">Lista de Tarefas</p>
 
 ## :books: Funcionalidades
-* <b>Funcionalidades</b>: Com esse projeto é possível criar, atualizar, consultar e deletar tarefas.
+* <b>Funcionalidades</b>: Com esse projeto é possível criar, atualizar, consultar e deletar tarefas cadastradas pelo usuário.
+
+## :books: Documentação
+* <b>Swagger</b>: https://localhost:7142/swagger/index.html
+* <b>Postman</b>: A documentação pode ser encontrada na pasta docs:
+Coleção Postman com os endpoints : Minimal API TodoList.postman_collection
 
 ## :wrench: Tecnologias utilizadas
 * DotNet 7;
