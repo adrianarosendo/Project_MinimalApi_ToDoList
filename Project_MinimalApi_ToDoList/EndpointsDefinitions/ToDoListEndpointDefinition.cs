@@ -21,7 +21,7 @@ namespace ToDoList.EndpointsDefinitions
             toDoItem.MapPost("/", CreateItem)
                 .AddEndpointFilter<ToDoItemValidatorFilter>();
 
-            toDoItem.MapGet("/", GetAllToDoItems);
+            toDoItem.MapGet("/all", GetAllToDoItems);
 
             toDoItem.MapGet("/overdue", GetAllOverdueItems);
 
