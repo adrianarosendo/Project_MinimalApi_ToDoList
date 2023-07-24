@@ -126,6 +126,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get overdue items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7142/api/item/overdue",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7142",
+					"path": [
+						"api",
+						"item",
+						"overdue"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
