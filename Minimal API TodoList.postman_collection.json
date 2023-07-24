@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "dd155ef0-d9ce-4109-823f-9d4acaafb700",
+		"name": "Minimal API TodoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create todo item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Tarefa 1\",\r\n    \"deadline\": \"2023-07-26T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7142/api/item",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7142",
+					"path": [
+						"api",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Tarefa 1\",\r\n    \"isComplete\": true\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7142/api/item/id_number",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7142",
+					"path": [
+						"api",
+						"item",
+						"id_number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7142/api/item/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7142",
+					"path": [
+						"api",
+						"item",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get item by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7142/api/item/id_number",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7142",
+					"path": [
+						"api",
+						"item",
+						"id_number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7142/api/item/id_number",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7142",
+					"path": [
+						"api",
+						"item",
+						"id_number"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
