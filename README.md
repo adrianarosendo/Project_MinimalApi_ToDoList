@@ -13,7 +13,10 @@
 dotnet run
 ```
 ## ⚙️ Executando os testes
-* Usar o comando no terminal "dotnet test" para rodar os testes unitários da aplicação.
+* Usar o comando abaixo no terminal para rodar os testes unitários da aplicação.
+```
+dotnet test
+```
 
 ## :books: Documentação
 * <b>Swagger</b>: https://localhost:7142/swagger/index.html
