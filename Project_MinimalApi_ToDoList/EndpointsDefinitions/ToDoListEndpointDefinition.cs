@@ -71,6 +71,10 @@ namespace ToDoList.EndpointsDefinitions
         {
             var updateItem = new UpdateToDo { ToDoId = id, ToDoContent = toDoItem };
             var updatedItem = await mediator.Send(updateItem);
+            if (updatedItem == null)
+            {
+                return Results.BadRequest("Duplicate Task");
+            }
             return TypedResults.Ok(updatedItem);
 
         }

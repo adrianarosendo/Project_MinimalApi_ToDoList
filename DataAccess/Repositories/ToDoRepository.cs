@@ -33,12 +33,12 @@ namespace DataAccess.Repositories
 
         public async Task DeleteToDo(int toDoId)
         {
-            var post = await _socialDBContext.ToDoItem.FirstOrDefaultAsync(p => p.Id == toDoId);
-            if (post == null) {
+            var toDo = await _socialDBContext.ToDoItem.FirstOrDefaultAsync(p => p.Id == toDoId);
+            if (toDo == null) {
                 return;
             };
 
-            _socialDBContext.ToDoItem.Remove(post);
+            _socialDBContext.ToDoItem.Remove(toDo);
             await _socialDBContext.SaveChangesAsync();
 
         }
@@ -48,9 +48,11 @@ namespace DataAccess.Repositories
             return await _socialDBContext.ToDoItem.ToListAsync();
         }
 
-        public async Task<ToDoItem?> GetToDoById(int postId)
+        public async Task<ToDoItem?> GetToDoById(int toDoId)
         {
-            return await _socialDBContext.ToDoItem.FirstOrDefaultAsync(p => p.Id == postId);
+
+                return await _socialDBContext.ToDoItem.FirstOrDefaultAsync(p => p.Id == toDoId);
+
         }
 
         public async Task<ICollection<ToDoItem>> GetAllOverdueItems()
@@ -64,6 +66,13 @@ namespace DataAccess.Repositories
             if (toDo == null) { 
                 return null; 
             }
+
+            var verifyDuplicate = _socialDBContext.ToDoItem.FirstOrDefault(t => t.Name == updatedContent.Name && t.Id != toDo.Id);
+            if (verifyDuplicate!= null)
+            {
+                return null;
+            }
+
 
             toDo.LastUpdate = DateTime.Now;
             if(!toDo.Name.IsNullOrEmpty()) { 

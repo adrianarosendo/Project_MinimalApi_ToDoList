@@ -14,7 +14,7 @@ namespace Application.ToDo.CommandHandlers
         {
             _toDoRepository = toDoRepository;
         }
-        public async Task<ToDoItem> Handle(UpdateToDo request, CancellationToken cancellationToken)
+        public async Task<ToDoItem?> Handle(UpdateToDo request, CancellationToken cancellationToken)
         {
             var updateToDo = await _toDoRepository.UpdateToDo(request.ToDoContent, request.ToDoId);
             return updateToDo;
