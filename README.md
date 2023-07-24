@@ -5,6 +5,8 @@
 
 ## :books: Funcionalidades
 * <b>Funcionalidades</b>: Com esse projeto é possível criar, atualizar, consultar e deletar tarefas cadastradas pelo usuário.
+* Para inicializar, no terminal acessar a pasta do projeto Project_MinimalApi_ToDoList.csproj e digitar o comando "dotnet run".
+* Usar o comando "dotnet test" para rodar os testes unitários da aplicação.
 
 ## :books: Documentação
 * <b>Swagger</b>: https://localhost:7142/swagger/index.html
